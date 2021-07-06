@@ -62,7 +62,7 @@ public class RegexComposerTestCase extends TestCase {
             will(returnValue(apples));
             one(fallThru).instantiating(with(any(MutablePicoContainer.class)), with(any(ComponentAdapter.class)), with(any(Constructor.class)));
             will(returnValue(NeedsApples.class.getConstructor(List.class)));
-            one(fallThru).instantiated(with(any(MutablePicoContainer.class)), with(any(ComponentAdapter.class)), with(any(Constructor.class)), with(any(NeedsApples.class)), with(any(Object[].class)), with(any(int.class)));
+            one(fallThru).instantiated(with(any(MutablePicoContainer.class)), with(any(ComponentAdapter.class)), with(any(Constructor.class)), with(any(NeedsApples.class)), with(any(Object[].class)), with(any(long.class)));
         }});
 
         final MutablePicoContainer pico = new DefaultPicoContainer(new ComposingMonitor(fallThru, new RegexComposer("qqq[1-9]", "qqq")));

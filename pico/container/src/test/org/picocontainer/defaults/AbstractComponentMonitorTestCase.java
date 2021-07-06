@@ -93,7 +93,7 @@ public class AbstractComponentMonitorTestCase {
             one(monitor).changeMonitor(with(equal(currentMonitor)));
             one(monitor).currentMonitor();
             will(returnValue(currentMonitor));
-            one(monitor).instantiating(with(any(PicoContainer.class)), with(any(ComponentAdapter.class)), with(any(Constructor.class)));
+            one(monitor).instantiating(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(aNull(Constructor.class)));
     	}});
         return monitor;
     }

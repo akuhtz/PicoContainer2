@@ -11,6 +11,19 @@
 		<developerConnection>scm:svn:https://svn.codehaus.org/picocontainer/java/2.x/trunk/booter</developerConnection>
 		<url>https://svn.codehaus.org/picocontainer/java/2.x/trunk/booter</url>
 	</scm>
+	
+    <properties>
+        <!-- unify the encoding for all the modules -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jdk.version>1.8</jdk.version>
+        <compiler.fork>1.8</compiler.fork>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+		
+		<maven.compiler.release>8</maven.compiler.release>
+    </properties>
+	
 	<distributionManagement>
 		<repository>
 			<id>codehaus.org</id>
@@ -91,10 +104,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
+        <version>3.8.1</version>
         <configuration>
+			<!--
           <source>1.5</source>
           <target>1.5</target>
+		  -->
           <encoding>UTF-8</encoding>
           <optimize>false</optimize>
           <debug>true</debug>

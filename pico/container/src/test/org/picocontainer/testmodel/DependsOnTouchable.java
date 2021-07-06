@@ -12,7 +12,7 @@ package org.picocontainer.testmodel;
 
 import java.io.Serializable;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 /**
  * @author steve.freeman@m3p.co.uk

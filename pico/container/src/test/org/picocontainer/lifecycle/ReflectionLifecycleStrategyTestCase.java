@@ -7,6 +7,7 @@
  *****************************************************************************/
 package org.picocontainer.lifecycle;
 
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertFalse;
 import org.picocontainer.monitors.NullComponentMonitor;
 import static org.picocontainer.tck.MockFactory.mockeryWithCountingNamingScheme;
@@ -105,7 +106,7 @@ public class ReflectionLifecycleStrategyTestCase {
 				one(componentMonitor).invoked(with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
 						with(isDisposeMethod), with(same(disposable)),
-                        with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                        with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 				one(componentMonitor2).invoking(
 						with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
@@ -114,7 +115,7 @@ public class ReflectionLifecycleStrategyTestCase {
 						with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
 						with(isDisposeMethod), with(same(disposable)),
-                        with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                        with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 			}
 		});
 		strategy.dispose(disposable);
@@ -143,7 +144,7 @@ public class ReflectionLifecycleStrategyTestCase {
 				one(componentMonitor).invoked(with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
 						with(isStartMethod), with(same(lifecycle)),
-                        with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                        with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 				one(componentMonitor).invoking(
 						with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
@@ -151,7 +152,7 @@ public class ReflectionLifecycleStrategyTestCase {
 				one(componentMonitor).invoked(with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
 						with(isStopMethod), with(same(lifecycle)),
-                        with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                        with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 				one(componentMonitor).invoking(
 						with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
@@ -159,7 +160,7 @@ public class ReflectionLifecycleStrategyTestCase {
 				one(componentMonitor).invoked(with(aNull(PicoContainer.class)),
 						with(aNull(ComponentAdapter.class)),
 						with(isDisposeMethod), with(same(lifecycle)),
-                        with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                        with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 			}
 		});
 
@@ -194,7 +195,7 @@ public class ReflectionLifecycleStrategyTestCase {
 							.invoked(with(aNull(PicoContainer.class)),
 									with(aNull(ComponentAdapter.class)),
 									with(isStartMethod), with(same(mock)),
-                                    with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                                    with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 					one(componentMonitor).invoking(
 							with(aNull(PicoContainer.class)),
 							with(aNull(ComponentAdapter.class)),
@@ -202,7 +203,7 @@ public class ReflectionLifecycleStrategyTestCase {
 					one(componentMonitor).invoked(
 							with(aNull(PicoContainer.class)),
 							with(aNull(ComponentAdapter.class)),
-							with(isStopMethod), with(same(mock)), with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+							with(isStopMethod), with(same(mock)), with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 				}
 			});
 			return mock;
@@ -220,7 +221,7 @@ public class ReflectionLifecycleStrategyTestCase {
 							.invoked(with(aNull(PicoContainer.class)),
 									with(aNull(ComponentAdapter.class)),
 									with(isDisposeMethod), with(same(mock)),
-                                    with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                                    with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
 				}
 			});
 			return mock;

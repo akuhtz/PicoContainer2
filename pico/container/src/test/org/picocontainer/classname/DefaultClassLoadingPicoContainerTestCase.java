@@ -221,12 +221,12 @@ public class DefaultClassLoadingPicoContainerTestCase extends AbstractPicoContai
                 sb.append(clazz.getName()).append("\n");
             }
         });
-        assertEquals("com.thoughtworks.xstream.io.xml.xppdom.XppDom\n" +
-                "com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom\n" +
-                "com.thoughtworks.xstream.core.util.PrioritizedList$PrioritizedItem\n" +
+        assertEquals("com.thoughtworks.xstream.core.util.CustomObjectOutputStream\n" +
                 "com.thoughtworks.xstream.core.util.CustomObjectInputStream\n" +
-                "com.thoughtworks.xstream.core.util.CustomObjectOutputStream\n" +
-                "com.thoughtworks.xstream.XStream\n",
+                "com.thoughtworks.xstream.core.util.PrioritizedList$PrioritizedItem\n" +
+                "com.thoughtworks.xstream.XStream\n" +
+                "com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom\n" +
+                "com.thoughtworks.xstream.io.xml.xppdom.XppDom\n",
                 sb.toString());
         assertEquals(6, found);
     }

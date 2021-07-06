@@ -10,6 +10,7 @@
 
 package org.picocontainer.defaults;
 
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import static org.picocontainer.tck.MockFactory.mockeryWithCountingNamingScheme;
@@ -422,12 +423,12 @@ public class DefaultPicoContainerLifecycleTestCase {
             one(cm).invoked(with(aNull(PicoContainer.class)),
                     with(aNull(ComponentAdapter.class)),
                     with(equal(Startable.class.getMethod("stop", (Class[])null))),
-                    with(same(s1)), with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+                    with(same(s1)), with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
             // s2 expectations
             one(cm).invoking(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("start", (Class[])null))), with(same(s2)), with(any(Object[].class)));
-            one(cm).invoked(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("start", (Class[])null))), with(same(s2)), with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+            one(cm).invoked(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("start", (Class[])null))), with(same(s2)), with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
             one(cm).invoking(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("stop", (Class[])null))), with(same(s2)), with(any(Object[].class)));
-            one(cm).invoked(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("stop", (Class[])null))), with(same(s2)), with(any(Long.class)), with(any(Object[].class)), with(same(null)));
+            one(cm).invoked(with(aNull(PicoContainer.class)), with(aNull(ComponentAdapter.class)), with(equal(Startable.class.getMethod("stop", (Class[])null))), with(same(s2)), with(any(Long.class)), with(any(Object[].class)), with(nullValue()));
     	}});
 
         DefaultPicoContainer dpc = new DefaultPicoContainer(cm);

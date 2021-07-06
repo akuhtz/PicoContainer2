@@ -36,6 +36,12 @@
       <artifactId>xpp3_min</artifactId>
       <scope>compile</scope>
     </dependency>
+    
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+            </dependency>
+    
   </dependencies>
   <build>
     <sourceDirectory>../container/src/test</sourceDirectory>
@@ -48,8 +54,10 @@
             <include>org/picocontainer/tck/**/*.java</include>
             <include>org/picocontainer/testmodel/**/*.java</include>
           </includes>
+		  <!--
           <source>1.5</source>
           <target>1.5</target>
+		  -->
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>

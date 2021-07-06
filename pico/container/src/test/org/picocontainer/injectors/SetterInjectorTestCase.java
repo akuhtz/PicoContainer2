@@ -34,7 +34,7 @@ import org.picocontainer.testmodel.PurseBean;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.hamcrest.text.StringContains.containsString;
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThat;
@@ -276,7 +276,7 @@ public class SetterInjectorTestCase
             aAdapter.getComponentInstance(pico, ComponentAdapter.NOTHING.class);
         } catch (AbstractInjector.UnsatisfiableDependenciesException e) {
             String message = e.getMessage().replace("org.picocontainer.injectors.SetterInjectorTestCase$", "");
-            assertThat(message, containsString("A has unsatisfied dependencies [class java.lang.String, interface java.util.List] for members ["));
+            assertThat(message, containsString("A has unsatisfied dependencies [interface java.util.List, class java.lang.String] for members ["));
             assertThat(message, containsString("public void A.setList(java.util.List)"));
             assertThat(message, containsString("public void A.setString(java.lang.String)"));
         }
