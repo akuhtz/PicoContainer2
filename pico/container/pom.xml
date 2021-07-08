@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
-            <groupId>com.thoughtworks.paranamer</groupId>
+            <groupId>${paranamer.groupId}</groupId>
             <artifactId>paranamer</artifactId>
         </dependency>
         <dependency>
@@ -27,7 +27,7 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.thoughtworks.paranamer</groupId>
+                <groupId>${paranamer.groupId}</groupId>
                 <artifactId>paranamer-maven-plugin</artifactId>
                 <configuration>
                     <sourceDirectory>src/test</sourceDirectory>
@@ -63,7 +63,7 @@
                             </artifactSet>
                             <filters>
                                 <filter>
-                                    <artifact>com.thoughtworks.paranamer:paranamer</artifact>
+                                    <artifact>${paranamer.groupId}:paranamer</artifact>
                                     <excludes>
                                         <exclude>com/thoughtworks/paranamer/Javadoc*</exclude>
                                         <exclude>com/thoughtworks/paranamer/Null*</exclude>

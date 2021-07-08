@@ -2,6 +2,12 @@
 2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 h
 ttp://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+      <groupId>org.sonatype.oss</groupId>
+      <artifactId>oss-parent</artifactId>
+      <version>9</version>
+    </parent>
    
    <groupId>org.picocontainer</groupId>
    <artifactId>picocontainer-root</artifactId>
@@ -41,9 +47,19 @@ ttp://maven.apache.org/maven-v4_0_0.xsd">
         <maven.compiler.target>1.8</maven.compiler.target>
 
 		<maven.compiler.release>8</maven.compiler.release>
-		
-		<paranamer.version>2.8.1-SNAPSHOT</paranamer.version>
     </properties>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Nexus Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
    
 </project>
