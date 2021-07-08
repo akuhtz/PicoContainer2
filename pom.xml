@@ -9,7 +9,7 @@ ttp://maven.apache.org/maven-v4_0_0.xsd">
       <version>9</version>
     </parent>
    
-   <groupId>org.picocontainer</groupId>
+   <groupId>org.bidib.org.picocontainer</groupId>
    <artifactId>picocontainer-root</artifactId>
    
    <name>PicoContainer Root</name>

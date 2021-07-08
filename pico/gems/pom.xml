@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.picocontainer</groupId>
+    <groupId>org.bidib.org.picocontainer</groupId>
     <artifactId>picocontainer-parent</artifactId>
     <version>2.15.1-SNAPSHOT</version>
   </parent>
@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
-      <groupId>${pom.groupId}</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>picocontainer</artifactId>
     </dependency>
     <!-- For proxy -->
@@ -66,7 +66,7 @@
     </dependency>
     <!-- For test -->
     <dependency>
-      <groupId>${pom.groupId}</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>picocontainer-tck</artifactId>
       <scope>test</scope>
     </dependency>
